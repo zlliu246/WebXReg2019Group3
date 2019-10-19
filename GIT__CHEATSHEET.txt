@@ -1,0 +1,40 @@
+Git cheatsheet
+
+I want to see wth is going on now on my local repo
+	- git status
+
+I want the most updated changes
+	- git pull
+
+I have new stuff i want to push/upload to the cloud
+	- git add .
+	- git commit -m "insert commit message here - can be anything but try to make it meaningful lol"
+	- git push
+
+	** NOTE: u need to git pull before you can git push **
+
+I want to see the previous commit messages
+	- git log --oneline
+
+there a MERGE CONFLICT when i git pull. wtf do i do?
+	** conflicts happen if someone else's change and your changes on the same file are different and git doesnt know which to keep **	
+
+	- git add . (this makes git track your files)
+	- git stash (this takes all new changes and saves it, then resets git to the last commit - basically put your changes somewhere temporarily)
+	- git pull  (this should work)
+
+I made weird changes that i want to get rid of. what do i do?
+	- git log --oneline
+	- copy paste the commit hash (around 6 letters/numbers of gibberish) you want to go back to
+	
+	if you dont want your changes at all:
+		- git reset --hard {commit-hash}
+		- "--hard" keyword gets rid of your changes completely
+	
+	else:
+		- git reset --soft {commit-hash}
+		- "--soft" keyword gets rid of your committed changes, but doesnt get rid of your changes in your code editor
+		
+		
+
+
