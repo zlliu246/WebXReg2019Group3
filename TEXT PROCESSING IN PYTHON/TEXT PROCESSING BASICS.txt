@@ -1,0 +1,47 @@
+Using python: nltk 
+
+Requirements:
+    python 3.7
+    type "pip install nltk, pandas" into terminal
+
+
+1. Lowercase
+    - change everything to lowercase
+
+2. Remove punctuation 
+    - remove all punctuation 
+    - "from string import punctuation"
+
+3. Tokenize
+    - turn a paragraph (type string) into a list containing many strings
+    - so easier for your comp to process
+
+    EG.
+        Before tokenization: "i like to drink apple juice" 
+        After tokenization:  ["i", "like", "to", "drink", "apple", "juice" ]
+
+4. Remove stopwords
+    - stopwords: common words like "he", "i", "on" etc.
+    - that do not add much value to word analytics cus they're everywhere
+    - remove them from your list of words
+
+    hint: 
+        from nltk.corpus import stopwords
+        stopwords = stopwords.words("english")
+        stopwords = set(stopwords)      # to make this faster
+
+5. stemming
+    - changes a word to its root form
+
+    eg. 
+        dogs --> dog
+        swimming --> swim
+        fantastically --> fantast
+        building --> build
+        events --> event
+
+    if word has not root form, the function returns itself
+
+
+TARGET:
+    new csv file, with the relevant text cleaned
