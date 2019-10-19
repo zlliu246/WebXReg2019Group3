@@ -1,5 +1,12 @@
 Git cheatsheet
 
+I have nothing now and want a online git repository on my computer
+	- go to github
+	- copy paste the url (that says clone by https)
+	- go to your terminal and navigate to wherever you want your folder to be
+	- git clone {pasted_git_url}
+	- done
+
 I want to see wth is going on now on my local repo
 	- git status
 
