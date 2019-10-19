@@ -29,13 +29,17 @@ def clean(string):
     list_words = remove_stopwords(tokenize(remove_punctuation(string)))
     return " ".join([lem.lemmatize(i) for i in list_words])
 
+#retrieve all data from the csv file in DataFrame
+
 data = pd.read_csv("from.csv")
-data["cleaned"] = [clean(i) for i in data["paragraph"]]
 
-for i,j in data.values:
-    print(i)
-    print("\n\n\n")
-    print(j)
-    break
+#retrieve data within the 'paragraph' column and execute clean() function on each
 
+data["paragraph"] = [clean(i) for i in data["paragraph"]]
+
+#populate all the new data into another csv file
+
+data.to_csv("out.csv", index=False)
+
+print("Complete Cleaning")
 
