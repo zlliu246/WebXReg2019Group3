@@ -31,3 +31,11 @@ def clean(string):
 
 data = pd.read_csv("from.csv")
 data["cleaned"] = [clean(i) for i in data["paragraph"]]
+
+for i,j in data.values:
+    print(i)
+    print("\n\n\n")
+    print(j)
+    break
+
+
